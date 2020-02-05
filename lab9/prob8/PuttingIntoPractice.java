@@ -52,12 +52,25 @@ public class PuttingIntoPractice{
 			.sorted().collect(Collectors.joining(", ")));
         	
 
-        // Query 5: Are there any trader based in Milan?
-        
+      // Query 5: Are there any trader based in Milan?
+		System.out.println("Query 5:");
+		System.out.print(
+				transactions.stream()
+				.anyMatch(x->x.getTrader().getCity().equals("Milan"))
+				);
    
      // Query 6: Update all transactions so that the traders from Milan are set to Cambridge.
+		System.out.println("Query 5:");
+		transactions.stream()
+					.filter(x->x.getTrader().getCity().equals("Milan"))
+					.forEach(x->x.getTrader().setCity("Cambridge"));
+		System.out.println(transactions);
         
         
         // Query 7: What's the highest value in all the transactions?
-    }
+		System.out.println("Query 5:");
+		System.out.println(transactions.stream()
+					.map(x->x.getValue())
+					.reduce(0,Integer::max));
+
 }
