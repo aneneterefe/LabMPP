@@ -8,7 +8,7 @@ public class Prob5 {
 
 	public static Stream<String> streamSection(Stream<String> stream, int m, int n) {
 		// Implement the code
-		return stream.map(x->x.substring(m, n));
+		return stream.limit(n+1).skip(m);
 	}
 	public static void main(String[] args) {
 		// Make three calls for the streamSection() method with different inputs
