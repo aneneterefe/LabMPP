@@ -36,7 +36,7 @@ public class PuttingIntoPractice{
         System.out.println(transactions.stream()
         	.map((x)->x.getTrader().getCity())
         	.distinct()
-        	.collect(Collectors.joining(", ")));
+        	.collect(Collectors.joining(", "))); 
 
         // Query 3: Find all traders from Cambridge and sort them by name.
         System.out.println("Query 3:");
